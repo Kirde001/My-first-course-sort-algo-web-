@@ -1,0 +1,24 @@
+#include <stdio.h> 
+void main () 
+{
+    int n [10] = { 20, 11, 22, 44, 99, 1873, 1001, 8, 656, 1 }, min;
+    for (int k = 0; k <= 8; k++)
+    {
+        for (int j = k + 1; j <= 9; j++)
+        {
+            min = k;
+            if (n[j] < n [min])
+            {
+                min = j;
+            }
+            
+            int t = n[k];
+            n[k] = n [min];
+            n[min] = t;
+        }
+    }
+    for (int i = 0; i<= 9; i++)
+    {
+        printf("%d\n", n[i]);
+    }
+}
